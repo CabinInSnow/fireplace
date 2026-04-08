@@ -1,0 +1,19 @@
+[package]
+name = "sample-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cabin-fireplace = { path = "../cabin-fireplace" }
+axum = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+# Used only by src/bin/setup_db.rs
+sqlx = { workspace = true }
+
+[[bin]]
+name = "setup_db"
+path = "src/bin/setup_db.rs"
